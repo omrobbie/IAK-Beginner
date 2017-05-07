@@ -22,12 +22,11 @@
 
     <EditText
         android:id="@+id/txtUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="User Name"
-        android:enabled="false"
+        android:hint="User Name"
         android:layout_marginTop="100sp"
-        android:layout_marginLeft="120sp"/>
+        android:layout_toRightOf="@id/lblUsername"/>
 
     <TextView
         android:id="@+id/lblPassword"
@@ -40,13 +39,12 @@
         android:padding="@dimen/textpadding"/>
 
     <EditText
-        android:id="txtPassword"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtPassword"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:enabled="false"
+        android:hint="Password"
         android:layout_marginTop="140sp"
-        android:layout_marginLeft="120sp"/>
+        android:layout_toRightOf="@id/lblPassword"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -55,5 +53,7 @@
         android:text="LOGIN"
         android:textColor="#FFFFFF"
         android:background="#FFE000"
-        android:layout_centerInParent="true"/>
+        android:layout_marginTop="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lblPassword"/>
 </RelativeLayout>
