@@ -1,6 +1,6 @@
 IAK Beginner
 ============
-Acara ini merupakan bagian dari [Indonesia Android Kejar](https://events.withgoogle.com/indonesia-android-kejar/ "Event Indonesia Android Kejar").
+Acara ini merupakan bagian dari [Indonesia Android Kejar](https://events.withgoogle.com/indonesia-android-kejar/ "Event Indonesia Android Kejar") yang diadakan pada periode 1 (April - Mei 2017).
 
 ---
 
