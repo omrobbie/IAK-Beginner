@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txtNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama kamu"
+        android:textSize="25sp"
+        android:padding="@dimen/textpadding"/>
+
+    <Button
+        android:id="@+id/btnGetNama"
+        android:layout_width="200sp"
+        android:layout_height="80sp"
+        android:text="Get Data"
+        android:textSize="25sp"
+        android:layout_below="@id/txtNama"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtNamaShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, "
+        android:textSize="40sp"
+        android:padding="@dimen/textpadding"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
