@@ -17,14 +17,23 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView Two"/>
+        android:text="TextView Two"
+        android:textSize="15sp"
+        android:layout_gravity="right"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="200sp"
         android:text="Button"
-        android:background="@color/black"
-        android:textColor="@color/white"
+        android:background=""
+        android:textColor="@color/black"
         android:textSize="25sp"
-        android:gravity="start|bottom"/>
+        android:gravity="center|bottom"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView Three"
+        android:textSize="25sp"
+        android:layout_gravity="center"/>
 </LinearLayout>
