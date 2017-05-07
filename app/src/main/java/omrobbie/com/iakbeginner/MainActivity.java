@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
 
                 // untuk pindah ke activity yang lain
                 Intent toTarget = new Intent(getApplicationContext(), ActivityTarget.class);
+                toTarget.putExtra("data", "Passing Data")
                 startActivity(toTarget);
             }
         });
