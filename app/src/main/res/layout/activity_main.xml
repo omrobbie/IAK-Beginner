@@ -13,5 +13,6 @@
         android:text="@string/hello"
         android:background="@color/black"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:padding="@dimen/activity_horizontal_margin"/>
 </RelativeLayout>
