@@ -16,12 +16,20 @@ public class MainActivity extends Activity {
         setContentView(R.layout.layout_activity);
 
         final TextView txtCenter = (TextView) findViewById(R.id.txtCenter);
-        Button btn = (Button) findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btnGet = (Button) findViewById(R.id.btnGet);
+        btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String getText = txtCenter.getText().toString();
                 Toast.makeText(getApplicationContext(), getText, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Button btnSet = (Button) findViewById(R.id.btnSet);
+        btnSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtCenter.setText("TextView Baru!");
             }
         });
     }
