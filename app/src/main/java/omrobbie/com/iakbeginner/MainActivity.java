@@ -1,6 +1,7 @@
 package omrobbie.com.iakbeginner;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,8 +42,12 @@ public class MainActivity extends Activity {
         btnGetNama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String getNama = txtNama.getText().toString();
-                txtNamaShow.setText("Hello, " + getNama + " !");
+//                String getNama = txtNama.getText().toString();
+//                txtNamaShow.setText("Hello, " + getNama + " !");
+
+                // untuk pindah ke activity yang lain
+                Intent toTarget = new Intent(getApplicationContext(), ActivityTarget.class);
+                startActivity(toTarget);
             }
         });
     }
