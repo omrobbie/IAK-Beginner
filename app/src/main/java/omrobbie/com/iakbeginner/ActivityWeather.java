@@ -3,8 +3,10 @@ package omrobbie.com.iakbeginner;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,15 @@ public class ActivityWeather extends Activity {
                 data.add(weather);
                 adapter.notifyDataSetChanged();
                 lvList.setSelection(adapter.getCount() - 1);
+            }
+        });
+
+        lvList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), data.get(position).title + " removed", Toast.LENGTH_SHORT).show();
+                data.remove(position);
+                adapter.notifyDataSetChanged();
             }
         });
     }
