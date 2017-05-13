@@ -3,6 +3,7 @@ package omrobbie.com.iakbeginner;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -14,11 +15,29 @@ public class ActivityRadioButton extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_radiobutton);
 
-        RadioGroup rbgVote = (RadioGroup) findViewById(R.id.rbgVote);
+        final RadioGroup rbgVote = (RadioGroup) findViewById(R.id.rbgVote);
         rbgVote.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
+                Toast.makeText(getApplicationContext(), rb.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Button btnClear = (Button) findViewById(R.id.btnClear);
+        Button btnSubmit = (Button) findViewById(R.id.btnSubmit);
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rbgVote.clearCheck();
+            }
+        });
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RadioButton rb = (RadioButton) rbgVote.findViewById(rbgVote.getCheckedRadioButtonId());
                 Toast.makeText(getApplicationContext(), rb.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
