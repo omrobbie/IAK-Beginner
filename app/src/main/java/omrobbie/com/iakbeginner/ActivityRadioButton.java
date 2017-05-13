@@ -40,7 +40,9 @@ public class ActivityRadioButton extends Activity{
             @Override
             public void onClick(View v) {
                 RadioButton rb = (RadioButton) rbgVote.findViewById(rbgVote.getCheckedRadioButtonId());
-                Toast.makeText(getApplicationContext(), rb.getText().toString(), Toast.LENGTH_SHORT).show();
+                if (rb != null) {
+                    Toast.makeText(getApplicationContext(), rb.getText().toString(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
