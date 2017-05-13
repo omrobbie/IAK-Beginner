@@ -35,7 +35,9 @@ public class ActivityListView extends Activity{
         lvList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), data.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), data.get(position) + " remove", Toast.LENGTH_SHORT).show();
+                data.remove(position);
+                adapter.notifyDataSetChanged();
             }
         });
 
