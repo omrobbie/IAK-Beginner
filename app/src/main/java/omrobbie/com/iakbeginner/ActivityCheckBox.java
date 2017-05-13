@@ -6,7 +6,11 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import static omrobbie.com.iakbeginner.R.id.chkMusic;
+
 public class ActivityCheckBox extends Activity {
+
+    String txtEnabled = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,21 +24,24 @@ public class ActivityCheckBox extends Activity {
         chkMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), chkMusic.getText().toString(), Toast.LENGTH_SHORT).show();
+                txtEnabled = (chkMusic.isChecked()) ? "enabled" : "disabled";
+                Toast.makeText(getApplicationContext(), chkMusic.getText().toString() + " " + txtEnabled, Toast.LENGTH_SHORT).show();
             }
         });
 
         chkGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), chkGame.getText().toString(), Toast.LENGTH_SHORT).show();
+                txtEnabled = (chkGame.isChecked()) ? "enabled" : "disabled";
+                Toast.makeText(getApplicationContext(), chkGame.getText().toString() + " " + txtEnabled, Toast.LENGTH_SHORT).show();
             }
         });
 
         chkBlog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), chkBlog.getText().toString(), Toast.LENGTH_SHORT).show();
+                txtEnabled = (chkBlog.isChecked()) ? "enabled" : "disabled";
+                Toast.makeText(getApplicationContext(), chkBlog.getText().toString() + " " + txtEnabled, Toast.LENGTH_SHORT).show();
             }
         });
     }
