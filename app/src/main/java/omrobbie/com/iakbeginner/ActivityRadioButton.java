@@ -20,7 +20,9 @@ public class ActivityRadioButton extends Activity{
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
-                Toast.makeText(getApplicationContext(), rb.getText().toString(), Toast.LENGTH_SHORT).show();
+                if ((rb != null) && (checkedId > -1)) {
+                    Toast.makeText(getApplicationContext(), rb.getText().toString(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
