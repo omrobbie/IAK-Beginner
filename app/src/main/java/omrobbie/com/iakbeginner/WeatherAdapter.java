@@ -35,13 +35,22 @@ public class WeatherAdapter extends ArrayAdapter<Weather>{
         if (row == null) {
             LayoutInflater inflater = ((Activity)context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
+
+            holder = new WeatherHolder();
+            holder.imgIcon = (ImageView) row.findViewById(R.id.imgIcon);
+            holder.txtTitle = (TextView) row.findViewById(R.id.txtTitle);
+
+            // beri tanda agar tidak mengulang di kondisi if row == null
+            row.setTag(holder);
+        } else {
+            holder = (WeatherHolder) row.getTag();
         }
 
-        holder = new WeatherHolder();
-        holder.imgIcon = (ImageView) row.findViewById(R.id.imgIcon);
-        holder.txtTitle = (TextView) row.findViewById(R.id.txtTitle);
+        Weather weather = data.get(position);
+        holder.imgIcon.setImageResource(weather.icon);
+        holder.txtTitle.setText(weather.title);
 
-        return super.getView(position, convertView, parent);
+        return row;
     }
 
     static class WeatherHolder {
