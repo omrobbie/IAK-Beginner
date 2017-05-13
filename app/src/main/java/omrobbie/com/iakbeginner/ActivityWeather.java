@@ -18,6 +18,8 @@ public class ActivityWeather extends Activity {
         ArrayList<Weather> data = new ArrayList<>();
         Weather weather = new Weather(R.drawable.android_kejar, "Title");
         data.add(weather);
-        
+
+        WeatherAdapter adapter = new WeatherAdapter(this, R.layout.layout_listitem, data);
+        lvList.setAdapter(adapter);
     }
 }
