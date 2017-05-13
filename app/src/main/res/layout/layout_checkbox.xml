@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblHobi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apa hobi anda ?"/>
+
+    <CheckBox
+        android:id="@+id/chkMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Musik"/>
+
+    <CheckBox
+        android:id="@+id/chkGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/chkBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blog"/>
+</LinearLayout>
