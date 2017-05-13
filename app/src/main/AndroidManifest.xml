@@ -18,6 +18,9 @@
         </activity>
 
         <activity android:name=".ActivityCheckBox">
+        </activity>
+
+        <activity android:name=".ActivityRadioButton">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

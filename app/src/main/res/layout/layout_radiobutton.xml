@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vote"/>
+    <RadioGroup
+        android:id="@+id/rbgVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excellent"/>
+
+        <RadioButton
+            android:id="@+id/rbV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Satisfactory"/>
+
+        <RadioButton
+            android:id="@+id/rbV3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Below Average"/>
+    </RadioGroup>
+</LinearLayout>
